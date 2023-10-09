@@ -24,59 +24,56 @@ Live demo [_here_](https://www.example.com).
 ## General Information
 ### Project Overview
 
-In this project, I have write functions to implement logic for a beat-making music machine. 
+In this project, I wrote functions to implement logic for a beat-making music machine. 
 
 The application can loop over a 16-step grid of four drum types and play them when they are activated. 
+  - ✔ [issue #2 - function toggleDrum](https://github.com/SimonaPiz/BeatMix/issues/2)
 
-I have also write the functionality to invert each row of drums, clear each row of drums, or clear the entire board. 
+I also wrote the functionality to invert each row of drums, clear each row of drums, or clear the entire board.
+  - ✔ [issue #3 - function clear](https://github.com/SimonaPiz/BeatMix/issues/3)
+  - ✔ [issue #4 - function invert](https://github.com/SimonaPiz/BeatMix/issues/4)
 
-Finally, I have build the functionality to retrieve and save presets to a server.
+Finally, I build the functionality to retrieve and save presets to a server.
+  - ✔ [issue #5 - function presetHandler](https://github.com/SimonaPiz/BeatMix/issues/5)
 
 ▶ You can view a video demonstration of the final app here: [BeatMix](https://s3.amazonaws.com/codecademy-content/programs/build-apis/solution-videos/BeatMix480.mov)
 
-## How To Begin
 
-To start, download the starting code for this project <a href="https://s3.amazonaws.com/codecademy-content/PRO/skill-paths/backend-javascript/projects/beat-mix/project-2-beat-mix-start.zip" target="_blank">here</a>. After downloading the zip folder, double click it to uncompress it and access the contents of this project.
+### Implementation Bonus
 
-Once you have the project downloaded, you'll need to run some terminal commands to get the application started. First, open the root project directory in your terminal. Run `npm install` to install the dependencies of this project. Once it has finished installing, you can run `npm run start` to begin your server. You'll see `Server listening on port 4001` in the terminal. You'll have to have your server running to ensure that the code you write runs correctly and that you get to hear your drum beats! You can end your server process with a Ctrl + C shortcut in the terminal window.
+As a bonus, I implemented a function to play multiple synthesizer tones at once.
+  - ✔ [issue #7 - bonus function](https://github.com/SimonaPiz/BeatMix/issues/7)
 
-To see the application in its initial, non-working state, simply open **index.html** in a web browser. You will be writing JavaScript code that uses new syntax (you will learn more about this later). You should use [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) (at least version 60) or [Firefox](https://www.mozilla.org/en-US/firefox/new/) (at least version 55). If your version of Chrome or Firefox is too old, correctly-written code may still not run as expected. The links above will let you download the latest release of either browser if you do not have it or are unsure of which version you're running.
 
-## Implementation Details
+### Test Results
+  - ✔ [issue #8 - test code](https://github.com/SimonaPiz/BeatMix/issues/8)
 
-To complete this project, your code will need to contain the following in **public/js/script.js**:
+![Test Results](https://user-images.githubusercontent.com/91121660/273556800-9c4a7900-ed94-4655-9dcb-da86aa20a2b4.png)
 
-- Four variables to represent the arrays of drum pads. These arrays are named after the drums they represent: `kicks`, `snares`, `hiHats`, `rideCymbals`. These arrays should all have a length of `16` and be filled with `false`.
-- a function called `toggleDrum` that takes two arguments: a string representing the array name (`'kicks'`, `'snares'`, `'hiHats'`, or `'rideCymbals'`), and an index number. This function should flip the boolean value in the correct array at the specified index.
-- A function named `clear` that takes an array name string and sets all values in the correct array to `false`.
-- A function named `invert` that takes an array name string and flips the boolean value of all elements in the correct array.
 
-In addition, you will write some server-side code to handle saving and retrieving drum machine presets in **presetHandler.js**:
+## Technologies Used
+- Tech 1 - version 1.0
+- Tech 2 - version 2.0
+- Tech 3 - version 3.0
 
-- a function named `presetHandler`. This function will be called from within your server to get an existing preset or create/update a preset.
-  - `presetHandler` takes up to three arguments. The first argument is a string representing the request type: `'GET'` or `'PUT'`. The second argument is the array index of the `presets` array. For `'PUT'` requests, a third argument, `newPresetArray` will also be passed in, representing the new drum preset array to save at that index.
-  - `presetHandler` should return an array. This array will have one or two elements depending on how it is called. If `presetHandler` is called with an invalid `index`, it should return an array with `404` as the first element, meaning that that array index is <a href="https://en.wikipedia.org/wiki/HTTP_404" target="_blank">Not Found</a>. If `index` is valid, the first element of the return array should be `200`, meaning the request was <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200" target="_blank">OK</a>.
-  - If `presetHandler` is called a method that is not `'GET'` or `'PUT'`, it should return an array with `400` as the first element, meaning that it was a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400" target="_blank">Bad Request</a>.
-  - If the index was valid, `presetHandler` should also return a second element in the array. for `'GET'` requests, that element should be the preset array at that array index. For `'PUT'` requests, it should save the `newPresetArray` to that index and then also return it as the second element.
-  - If you are testing presets with the app itself, you will need to stop and re-start your server to see the changes you write in **presetHandler.js** take effect.
+## Usage
+Run `npm install` to install the dependencies of this project.
+```
+  $ npm install
+```
 
-### Bonus
+Run `npm run start` to begin your server. You'll see `Server listening on port 4001` in the terminal.
+```
+  $ npm run start
+```
+To see the application simply open **index.html** in a web browser.
 
-As a bonus, you can choose to implement a function in **script.js** to play multiple synthesizer tones at once by writing:
+## Acknowledgements
+Give credit here.
+- This project was inspired by...
+- This project was based on [this tutorial](https://www.example.com).
+- Many thanks to...
 
-- a function called `getNeighborPads` that accepts an x, y, and a size parameter. In the application, these values refer to the synth grid: `x` and `y` zero-indexed from the bottom left of the grid, and `size` is a number representing the number of rows/columns in the square. `getNeighborPads` should return an array of neighbors, each in the form `[xValue, yValue]`. Neighbors are the squares immediately to the left, right, above, and below of a grid position.
 
-To work on the bonus with tests, you will need to remove their pending status. Open the **test/test.js** and edit the line that begins `xdescribe('BONUS: getNeighborPads() function'` (it should be around line 360 in the test file). If you delete the `x` (so that the line simply starts with `describe(` and save the test file before re-running, your bonus tests will now be active.
-
-## Testing
-
-As you work, check your work! While you're working in `script.js`, you should only need to refresh your browser to see changes, but once your move to writing code in **presetHandler.js**, you will need to restart your server to test out your work. To stop your server running, use the `Ctrl + C` key command in your terminal and start it again with `npm run start`.
-
-A testing suite has been provided for you, checking for all essential functionality and
-edge cases. To run these tests, first open the root project directory in your terminal. Then run `npm install` to install all necessary testing dependencies (you will only need to do this step once).
-Finally, run `npm run test`. You will see a list of tests that ran with information
-about whether or not each test passed. After this list, you will see more specific output
-about why each failing test failed.
-
-As you implement functionality, run the tests to ensure you are creating correctly named variables and functions that return the proper values. The tests will additionally help you identify edge cases that you may not have anticipated when first writing the functions.
-
+## Contact
+Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
