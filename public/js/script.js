@@ -78,3 +78,49 @@ const clear = (arrayName) => {
     default: return;
   };  
 };
+
+/*4.
+Una funzione denominata invert che prende una stringa del nome di un array e capovolge il 
+valore booleano di tutti gli elementi nell'array corretto.
+*/
+const invert = (arrayName) => {
+  switch (arrayName) {
+    case 'kicks':
+      kicks = kicks.map(kick => {
+        if (!kick) {
+          return kick = true;
+        } else {
+          return kick = false;
+        };
+      });
+    break;
+    case 'snares':
+      snares = snares.map(kick => {
+        if (!kick) {
+          return kick = true;
+        } else {
+          return kick = false;
+        };
+      });
+    break;
+    case 'hiHats':
+      hiHats = hiHats.map(kick => {
+        if (!kick) {
+          return kick = true;
+        } else {
+          return kick = false;
+        };
+      });
+    break;
+    case 'rideCymbals':
+      rideCymbals = rideCymbals.map(kick => {
+        if (!kick) {
+          return kick = true;
+        } else {
+          return kick = false;
+        };
+      });
+    break;
+    default: return;
+  };  
+};
