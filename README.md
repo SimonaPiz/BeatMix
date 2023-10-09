@@ -1,4 +1,11 @@
+<img src="https://github.com/SimonaPiz/BeatMix/assets/91121660/f0672b25-a363-4e92-8e86-96003da4344b" width="120px" alt="Beat Mix" title="Beat Mix"/>
+
 # Beat Mix
+A drum machine web app that allows you to create musical patterns and save them as presets.
+
+Live demo [_here_](https://www.example.com).
+
+<img src="https://github.com/SimonaPiz/BeatMix/blob/main/anteprima01.png" width="800px" alt="preview" title="preview"/>
 
 ## Project Overview
 
