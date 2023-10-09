@@ -3,21 +3,14 @@
 # Beat Mix
 A drum machine web app that allows you to create musical patterns and save them as presets.
 
-Live demo [_here_](https://www.example.com).
 
 <img src="https://github.com/SimonaPiz/BeatMix/blob/main/anteprima01.png" width="800px" alt="preview" title="preview"/>
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
 * [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
 <!-- * [License](#license) -->
 
 
@@ -52,9 +45,14 @@ As a bonus, I implemented a function to play multiple synthesizer tones at once.
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+  - "body-parser": "^1.17.2",
+  - "chai": "^4.1.1",
+  - "chai-things": "^0.2.0",
+  - "cors": "^2.8.4",
+  - "express": "^4.15.4",
+  - "mocha": "^5.1.1",
+  - "morgan": "^1.8.2",
+  - "nodemon": "^1.11.0"
 
 ## Usage
 Run `npm install` to install the dependencies of this project.
@@ -69,11 +67,4 @@ Run `npm run start` to begin your server. You'll see `Server listening on port 4
 To see the application simply open **index.html** in a web browser.
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
-
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+This project comes from the Codecademy's [Create a Back-End with JavaScript](https://www.codecademy.com/learn/paths/create-a-back-end-app-with-javascript) course.
