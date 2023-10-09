@@ -56,3 +56,25 @@ const toggleDrum = (arrayName, index) => {
     default: return;
   };
 };
+
+/*3.
+Una funzione denominata clear che accetta una stringa del nome di una matrice e imposta 
+tutti i valori nella matrice corretta su false.
+*/
+const clear = (arrayName) => {
+  switch (arrayName) {
+    case 'kicks':
+      kicks = new Array(16).fill(false);
+    break;
+    case 'snares':
+      snares = new Array(16).fill(false);
+    break;
+    case 'hiHats':
+      hiHats = new Array(16).fill(false);
+    break;
+    case 'rideCymbals':
+      rideCymbals = new Array(16).fill(false);
+    break;
+    default: return;
+  };  
+};
